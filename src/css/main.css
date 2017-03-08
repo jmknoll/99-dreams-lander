@@ -3,15 +3,21 @@
  * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
  * Kroc Camen, and the H5BP dev community and team.
  */
-
+@font-face {
+  font-family: 'proxima-nova';
+  src: url('/fonts/ProximaNova-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
 
-html {
+html, body {
     color: #222;
     font-size: 1em;
     line-height: 1.4;
+    font-family: 'proxima-nova' !important;
 }
 
 /*
@@ -282,4 +288,139 @@ textarea {
     h3 {
         page-break-after: avoid;
     }
+}
+
+/* 
+    CUSTOM STYLES
+*/
+
+nav {
+    z-index: 10;
+    position: absolute;
+}
+
+#logo {
+    width: 150px;
+    padding: 3px 5px;
+    margin: 10px;
+}
+
+.title {
+    font-size: 64px;
+}
+
+.subtitle {
+    font-size: 24px;
+}
+
+.container-fluid {
+    padding: 0;
+}
+
+.hero-unit {
+    background-image: url('/img/space.jpg');
+    background-size: cover;
+    min-height: 500px;
+    text-align: center;
+}
+
+.hero-content {
+    display: inline-block;
+    flex-direction: column;
+    margin: 120px auto;
+    text-align: center;
+    padding: 40px 70px;
+    font-weight: normal;
+    color: white;
+}
+
+.hero-content button {
+    margin-top: 20px;
+    padding: 10px 30px;
+}
+
+button:focus, button:active {
+    outline: none !important;
+    color: #3396d1 !important;
+}
+
+.content-row {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+.content-row .text, .image {
+    box-sizing: border-box;
+    width: 50%;
+}
+
+@media screen and (max-width: 767px) {
+    .content-row {
+    }
+    .content-row .text, .image {
+        width: 100%;
+    }
+}
+
+.content-row .text {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 30px;
+}
+
+.content-row .text h2.subtitle {
+    margin-bottom: 20px;
+}
+
+.content-row .image img {
+    width: 100%;
+}
+
+.content-row .btn-submit-blue {
+    margin-top: 10px;
+}
+
+.modal-header {
+    border-bottom: none !important;
+}
+
+.modal-header .modal-title {
+    text-align: center;
+    font-size: 18px;
+    margin: 0 auto;
+    display: block;
+}
+
+.btn-submit-blue {
+  background-color: transparent;
+  color: #3396d1;
+  border: 1px solid #3396d1 !important;
+  text-shadow: none;
+  border-radius: 4px;
+  padding: 12px 40px;
+  cursor: pointer;
+  font-size: 15px;
+  
+}
+
+.btn-submit-blue:hover {
+  background-color: #3396d1;
+  color: white !important;
+}
+
+footer {
+    background-color: #e5e5e5;
+}
+
+footer p {
+    margin: 0;
+    padding: 20px;
 }

@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title></title>
+        <title>99 Dreams</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -11,6 +11,7 @@
         <!-- Place favicon.ico in the root directory -->
 
         <link rel="stylesheet" href="css/normalize.css">
+        <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
         <link rel="stylesheet" href="css/main.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
@@ -20,9 +21,96 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
-        <script src="https://code.jquery.com/jquery-{{JQUERY_VERSION}}.min.js" integrity="{{JQUERY_SRI_HASH}}" crossorigin="anonymous"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-{{JQUERY_VERSION}}.min.js"><\/script>')</script>
+        <nav>
+            <img id='logo' src='/img/logo.png' />
+        </nav>
+
+        <div class='container-fluid'>
+            <div class='hero-unit'>
+                <div class='hero-content'>
+                    <h1 class='title'>Dare to Dream</h1>
+                    <h2 class='subtitle'>We're providing 99 scholarships of $1000 to do anything you want</h2>
+                    <button class='btn btn-submit-blue' data-toggle="modal" data-target="#applyModal">Apply Today</button>
+                </div>          
+            </div>
+            <div class='content-row'>
+                <div class='text'>
+                    <h2 class='subtitle'>What is 99 Dreams?</h2>
+                    <p class='body-copy'>We're providing grants of $1000 each to 99 ambitious high school students over the next five years to fund intellectual or entrepreneurial projects. Whether that means building a weather balloon or a website, the only criteria we have are that you dream big and show us a realistic path to get there. To get started, just send us a short description of your dream, and a supporting document or video explaining your idea and why you deserve to win.</p>
+                </div>
+                <div class='image'>
+                    <img src='/img/dream_1.jpg' />
+                </div>
+            </div>
+            <div class='content-row'>
+                <div class='image'>
+                    <img src='/img/dream_2.jpg' />
+                </div>
+                <div class='text'>
+                    <h2 class='subtitle'>Why does it exist?</h2>
+                    <p class='body-copy'>Having worked with students from around the world, we've found that one of the biggest obstacles they face is not having the resources to turn their dreams into realities. We decided to address this problem by offering no-strings-attached grants to students who think big. Our goal is to fund 99 dreams over the next five years and continue to grow a movement which recognizes independent extracurricular work as an essential part of the high school experience.</p>
+                </div>
+            </div>
+            <div class='content-row'>
+                <div class='text'>
+                    <h2 class='subtitle'>Who can Apply?</h2>
+                    <p class='body-copy'>Any high school student anywhere in the world. The only requirement is that you have a dream. Click Apply and let us know what that dream is.</p>
+                    <p><button class='btn btn-submit-blue' data-toggle="modal" data-target="#applyModal">Apply Today</button></p>
+
+                </div>
+                <div class='image'>
+                    <img src='/img/dream_3.jpg' />
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p><a href='http://mentorverse.us'>Who are we?</a></p>
+        </footer>
+
+        <div class="modal fade" id="applyModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <span class='modal-title'>Apply today to be the first dream we fund</span>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              </div>
+              <div class="modal-body">
+                <form>
+                    <div class='form-group'>
+                        <label for="inputName">Name</label>
+                        <input type="text" class="form-control" id="inputName" placeholder="Your name...">
+                    </div>
+                    <div class='form-group'>
+                        <label for="inputEmail">Email</label>
+                        <input type="email" class="form-control" id="inputEmail" placeholder="Your email...">
+                    </div>
+                    <div class='form-group'>
+                        <label for="inputEdu">School</label>
+                        <input type="text" class="form-control" id="inputEdu" placeholder="Your educational institution...">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPlan">Description</label>
+                        <input type="textarea" class="form-control" id="inputPlan" placeholder="A brief description of your dream and how we can help you achieve it...">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputFile">Your Plan</label>
+                        <input type="file" id="inputFile">
+                        <p class="help-block">Please provide a document, video, or image which explains your plan.</p>
+                    </div>
+                    <button type="submit" class="btn btn-submit-blue btn-block">Submit</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        
+
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"  crossorigin="anonymous"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.1.1.min.js"><\/script>')</script>
+        <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
 
