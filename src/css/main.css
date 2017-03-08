@@ -18,6 +18,7 @@ html, body {
     font-size: 1em;
     line-height: 1.4;
     font-family: 'proxima-nova' !important;
+    width: 100vw;
 }
 
 /*
@@ -297,6 +298,7 @@ textarea {
 nav {
     z-index: 10;
     position: absolute;
+    left: 0;
 }
 
 #logo {
@@ -320,8 +322,9 @@ nav {
 .hero-unit {
     background-image: url('/img/space.jpg');
     background-size: cover;
-    min-height: 500px;
     text-align: center;
+    background-position: center center;
+    max-height: 100vh;
 }
 
 .hero-content {
@@ -386,6 +389,7 @@ button:focus, button:active {
 
 .content-row .btn-submit-blue {
     margin-top: 10px;
+    margin-bottom: 15px;
 }
 
 .modal-header {
@@ -397,6 +401,16 @@ button:focus, button:active {
     font-size: 18px;
     margin: 0 auto;
     display: block;
+}
+
+.modal-header .close {
+    font-size: 30px;
+    position: absolute;
+    z-index: 11;
+    top: 0;
+    right: 0;
+    padding: 13px;
+    cursor: pointer;
 }
 
 .btn-submit-blue {
