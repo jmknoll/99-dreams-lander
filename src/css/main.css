@@ -14,7 +14,7 @@
    ========================================================================== */
 
 html, body {
-    color: #222;
+    color: #4f4f4f;
     font-size: 1em;
     line-height: 1.4;
     font-family: 'proxima-nova' !important;
@@ -413,6 +413,14 @@ button:focus, button:active {
     cursor: pointer;
 }
 
+#modalPage1 {
+    display: block;
+}
+
+#modalPage2 {
+    display: none;
+}
+
 .btn-submit-blue {
   background-color: transparent;
   color: #3396d1;
@@ -437,4 +445,20 @@ footer {
 footer p {
     margin: 0;
     padding: 20px;
+}
+
+.alert-wrapper {
+    padding: 20px;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+}
+
+.alert-wrapper .alert {
+    display: none;
+}
+
+.alert.show {
+    display: block !important;
 }
