@@ -11,9 +11,9 @@
         <!-- Place favicon.ico in the root directory -->
 
         <link rel="stylesheet" href="css/normalize.css">
-        <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
+        <link rel='stylesheet' href='css/bootstrap.css'>
         <link rel="stylesheet" href="css/main.css">
-        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+        <script src="js/vendor/modernizr.min.js"></script>
     </head>
     <body>
         <!--[if lte IE 9]>
@@ -23,6 +23,7 @@
         <!-- Add your site or application content here -->
         <nav>
             <img id='logo' src='/img/logo.png' />
+            <span class='hide'>99 Dreams</span>
         </nav>
 
         <div class='container-fluid'>
@@ -66,7 +67,11 @@
         </div>
 
         <footer>
-            <p><a href='http://mentorverse.us'>Who are we?</a></p>
+            <p>
+                <a href='http://mentorverse.us'>Who are we?</a>
+                <a href='/about.html'>Any questions?</a>
+                <a href='terms.html'>Terms and Conditions</a>
+            </p>
         </footer>
 
         <div class="modal fade" id="applyModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -79,7 +84,15 @@
               <div class="modal-body">
                 <div id='modalPage1'>
                     <div class='content'>
-                        <p>The submission process is purposefully straightforward. Begin by filling in a bit of basic information and send us a short description of your plan. That can be a 1-page document outlining what you want to do, a link to a short (1-minute) YouTube video, or a short pitch desk about your idea. We’re not looking for anything too fancy; it just needs to be a great idea.</p>
+                        <p>The submission process is purposefully straightforward. We just need a bit of basic contact information from you and a plan of what you will do with the grant. That can be a 1-page document outlining what you want to do, a link to a short (1-minute) YouTube video, or a short pitch deck (3-5 slides) about your idea. We’re not looking for anything too fancy; it just needs to be a great idea.</p>
+                        <p>In your submission, please try to address the following questions:
+                        <ol>
+                            <li>What is your project?</li>
+                            <li>Why is this project important to you?</li>
+                            <li>What positive impacts will this project have?</li>
+                            <li>How are you going to use the funds to achieve your goals?</li>
+                        </ol>
+                        <p>Any questions about the program? <a href='/about.html'>Learn more here.</a></p>
                     <button class="btn btn-submit-blue btn-block" id='nextPageButton' >Got it. Lets get started.</button>
                     </div>
                 </div>
@@ -97,14 +110,36 @@
                             <label for="inputEdu">School</label>
                             <input type="text" class="form-control" id="inputEdu" placeholder="Your educational institution...">
                         </div>
+                        <div class='form-group'>
+                            <label for="inputCity">City</label>
+                            <input type="text" class="form-control" id="inputEdu" placeholder="Your city or town...">
+                        </div>
                         <div class="form-group">
                             <label for="inputPlan">Description</label>
                             <input type="textarea" class="form-control" id="inputPlan" placeholder="A brief description of your dream and how we can help you achieve it...">
                         </div>
+                        <div class='questions'>
+                            <Please
+                        </div>
                         <div class="form-group">
                             <label for="inputFile">Your Plan</label>
                             <input type="file" id="inputFile">
-                            <p class="help-block">Please provide a document, video, or image which explains your plan.</p>
+                            <p class="help-block">Please provide a document or powerpoint presentation which explains your plan.</p>
+                            <p class="help-block">**If submitting a video, please upload it to YouTube and provide us with a link to the video.</p>
+                        </div>
+                        <div class='form-group'>
+                            <label for ='inputTracking'>How did you hear about 99Dreams?</label>
+                            <select id='inputTracking'>
+                                <option val='school'>Through my school</option>
+                                <option val='friend'>From a friend</option>
+                                <option val='twitter'>Twitter</option>
+                                <option val='facebook'>Facebook</option>
+                                <option val='reddit'>Reddit</option>
+                                <option val='youtube'>YouTube</option>
+                                <option val='media'>News Media (Business Insider, Tech in Asia)</option>
+                                <option val='college_site'>College Website (unigo.com, fastweb.com)</option>
+                                <option val='other'>Other</option>
+                            </select>
                         </div>
                         <button class="btn btn-submit-blue btn-block" id='submitFormButton' >Submit</button>
                     </form>
@@ -128,20 +163,27 @@
 
 
         
-
+        <!--
         <script src="https://code.jquery.com/jquery-3.1.1.min.js"  crossorigin="anonymous"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.1.1.min.js"><\/script>')</script>
-        <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
+        -->
+        <script src="js/vendor/jquery.min.js"></script>
+        <script src="js/vendor/bootstrap.js"></script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
         <!--
         <script>
-            window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
-            ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-65991404-2', 'auto');
+          ga('send', 'pageview');
+
         </script>
-        <script src="https://www.google-analytics.com/analytics.js" async defer></script>
         -->
     </body>
 </html>

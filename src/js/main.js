@@ -2,24 +2,13 @@
 
 (function(){
 
-  const BASE_URL = 'http://localhost:3000/';
-
+  //const BASE_URL = 'http://localhost:3000/';
+  const BASE_URL = 'http://mentorverse.herokuapp.com/';
 
   $(document).ready(function(){
-    console.log('Rogue leader, standing by.')
+    console.log('Rogue leader, standing by.');
 
-    //var fileData;
-
-    /*
-    reader.onloadend = function () {
-      
-      console.log('reader loaded with file');
-      console.log(fileData)
-    }
-    */
-
-    var fileData;
-
+    var file = {};
 
     $('#nextPageButton').click(function(e){
       e.preventDefault();
@@ -30,34 +19,32 @@
     $('#inputFile').change(function(){
       var reader = new FileReader();
       var f = document.getElementById("inputFile").files;
+
+      file.name = f[0].name;
+      file.type = f[0].type;
+      file.size = f[0].size;
       
       reader.readAsDataURL(f[0]);
-      reader.onload = function(e) {
-        fileData = reader.result;
-      }
-
-    })
+      reader.onload = function() {
+        file.data = reader.result;
+      };
+    });
 
 
     $('#submitFormButton').click(function(e){
       e.preventDefault();
-
 
       var data = {
         dreams_user: {
           name: $('#inputName').val(),
           email: $('#inputEmail').val(),
           school: $('#inputEdu').val(),
+          city: $('#inputCity').val(),
           description: $('#inputPlan').val(),
-          fileData: fileData
-        }
-      }
-
-      
-
-      console.log(data);
-
-
+          tracking: $('#inputTracking').val()
+        },
+        file: file
+      };
 
       $.ajax({
         url: BASE_URL + 'api/v1/dreams_users',
@@ -65,21 +52,21 @@
         method: 'POST',
         crossDomain : true
       })
-
-      .done(function(data){
+      .done(function(){
+        $('#applyModal').modal('hide');
         $('.alert-success').addClass('show');
       })
       .fail(function(err){
-        console.log('error saving item')
-        console.error(err)
+        console.log('error saving item');
+        console.error(err);
 
         $('.alert-danger').addClass('show');
-        $('.alert-danger p').html(err.responseJSON.error)
+        $('.alert-danger p').html(err.responseJSON.error);
       })
       .always(function(){
         console.log('finished');
-      })
+      });
       
-    })
+    });
   });
 })();

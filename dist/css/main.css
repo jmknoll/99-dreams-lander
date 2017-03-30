@@ -23,6 +23,10 @@ html, body {
     width: 100vw;
 }
 
+.strong {
+    font-weight: bold;
+}
+
 /*
  * Remove text-shadow in selection highlight:
  * https://twitter.com/miketaylr/status/12228805301
@@ -309,6 +313,13 @@ nav {
     left: 0;
 }
 
+.hide {
+    font-size: 1px;
+    z-index: -1;
+    opacity: 0;
+    position: absolute;
+}
+
 #logo {
     width: 150px;
     padding: 3px 5px;
@@ -434,6 +445,13 @@ button:focus, button:active {
     cursor: pointer;
 }
 
+#modalPage1 {
+    display: block;
+}
+
+#modalPage2 {
+    display: none;
+}
 
 .btn-submit-blue {
   background-color: transparent;
@@ -454,9 +472,58 @@ button:focus, button:active {
 
 footer {
     background-color: #e5e5e5;
+    text-align: left;
 }
 
 footer p {
     margin: 0;
     padding: 20px;
+}
+
+footer a {
+    margin-right: 25px;
+}
+
+.alert-wrapper {
+    padding: 20px;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+}
+
+.alert-wrapper .alert {
+    display: none;
+}
+
+.alert.show {
+    display: block !important;
+}
+
+.about-page {
+    text-align: center;
+    padding-top: 80px;
+    padding-bottom: 50px;
+    /*background-color: #e5e5e5;*/
+}
+
+.terms-page {
+    text-align: left;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+
+.about-nav {
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0.3), rgba(0,0,0,0));
+    background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0));
+    height: 80px;
+    width: 100%;
+}
+
+.about-page .question {
+    margin-top: 30px;
+}
+
+.about-page .question .subtitle {
+    font-weight: bold;
 }
