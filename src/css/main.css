@@ -331,11 +331,21 @@ nav {
 }
 
 .hero-unit {
-    background-image: url('/img/space.jpg');
+    background-image: url('/img/space_mobile.jpg');
     background-size: cover;
     text-align: center;
     background-position: center center;
     max-height: 100vh;
+}
+
+@media screen and (min-width: 998px) {
+    .hero-unit {
+        background-image: url('/img/space_desktop.jpg');
+        background-size: cover;
+        text-align: center;
+        background-position: center center;
+        max-height: 100vh;
+    }
 }
 
 .hero-content {
@@ -424,12 +434,32 @@ button:focus, button:active {
     cursor: pointer;
 }
 
+.social-share-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.social-share-wrapper * {
+    margin: 0 5px;
+}
+
 #modalPage1 {
-    display: block;
+    display: none;
 }
 
 #modalPage2 {
     display: none;
+}
+
+#modalPage3 {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#modalPage3 img {
+    max-width: 40%;
 }
 
 .btn-submit-blue {

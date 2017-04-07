@@ -32,7 +32,21 @@
 
 
     $('#submitFormButton').click(function(e){
-      e.preventDefault();
+      if ( 
+        $('#inputName').val() !== '' 
+        && $('#inputEmail').val() !== ''
+        && $('#inputEdu').val() !== ''
+        && $('#inputCity').val() !== ''
+        && $('#inputPlan').val() !== ''
+        && $('#inputTracking').val() !== ''
+       ){ 
+          e.preventDefault();
+      } else {
+        return
+      }
+
+      $('.alert-danger').removeClass('show');
+      $('.alert-danger').addClass('hide');
 
       var data = {
         dreams_user: {
@@ -53,8 +67,13 @@
         crossDomain : true
       })
       .done(function(){
-        $('#applyModal').modal('hide');
-        $('.alert-success').addClass('show');
+        $('#modalPage2').css('display', 'none');
+        $('#modalPage3').css('display', 'block');
+        /*
+        setTimeout(function(){
+          $('#applyModal').modal('hide');
+        }, 1000);
+        */
       })
       .fail(function(err){
         console.log('error saving item');
