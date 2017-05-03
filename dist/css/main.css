@@ -1,3 +1,5 @@
+/*! HTML5 Boilerplate v5.3.0 | MIT License | https://html5boilerplate.com/ */
+
 /*
  * What follows is the result of much research on cross-browser styling.
  * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
@@ -32,6 +34,11 @@ html, body {
  * These selection rule sets have to be separate.
  * Customize the background color to match your design.
  */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
 
 ::selection {
     background: #b3d4fc;
@@ -206,6 +213,7 @@ textarea {
 }
 
 @media print,
+       (-webkit-min-device-pixel-ratio: 1.25),
        (min-resolution: 1.25dppx),
        (min-resolution: 120dpi) {
     /* Style adjustments for high resolution devices */
@@ -350,6 +358,9 @@ nav {
 
 .hero-content {
     display: inline-block;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     margin: 120px auto;
     text-align: center;
@@ -369,11 +380,14 @@ button:focus, button:active {
 }
 
 .content-row {
-    display: -webkit-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    -webkit-flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
     border-top: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
@@ -394,8 +408,15 @@ button:focus, button:active {
 
 .content-row .text {
     text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     padding: 0 30px;
 }
@@ -435,8 +456,15 @@ button:focus, button:active {
 }
 
 .social-share-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
 }
 
@@ -527,6 +555,7 @@ footer a {
 }
 
 .about-nav {
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0.3), rgba(0,0,0,0));
     background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0));
     height: 80px;
     width: 100%;
